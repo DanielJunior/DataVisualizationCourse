@@ -1,7 +1,42 @@
-.form-control{
-  width:auto;
+.form-control {
+    width: auto;
 }
 
-.select{
-  margin-left: -10%;
+.select {
+    margin-left: -10%;
+}
+
+.links line {
+    stroke: #999 !important;
+    stroke-opacity: 0.6;
+}
+
+.nodes circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+
+.sidebar-brand {
+    margin-bottom: 10%;
+}
+
+.sidebar-text {
+    color: #dff0d8;
+}
+
+svg {
+    background-color: #f9f9f9;
+    margin: 0 auto;
+    display: block;
+}
+
+#graph-div {
+    margin: 0 auto;
+    margin-top: 10%;
+    border-radius: 25px;
+    border: 1px solid #999
+}
+
+body {
+    background-color: #f9f9f9;
 }
