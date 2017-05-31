@@ -108,19 +108,30 @@ function graph() {
             .links(links_data);
 
         //TODO como determinar onde a aresta deve terminar para que a seta não seja sobreposta pelo nó destino
+        //a função como está é uma tentativa de resolver o problema
         function ticked() {
+            var source = {};
             link_obj
                 .attr("x1", function (d) {
+                    source.x = d.source.x;
                     return d.source.x;
                 })
                 .attr("y1", function (d) {
+                    source.y = d.source.y;
                     return d.source.y;
                 })
                 .attr("x2", function (d) {
-                    return d.target.x;
+                    if (source.x > d.target.x) {
+                        return d.target.x - 5;
+                    }
+                    return d.target.x + 5;
+
                 })
                 .attr("y2", function (d) {
-                    return d.target.y;
+                    if (source.y > d.target.y) {
+                        return d.target.y - 5;
+                    }
+                    return d.target.y + 5;
                 });
 
             node_obj
