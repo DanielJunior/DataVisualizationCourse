@@ -104,7 +104,8 @@ function graph() {
             .on("tick", ticked);
 
         simulation.force("link")
-            .links(links_data);
+            .links(links_data)
+            .distance(function(){return 50;});
 
         //TODO como determinar onde a aresta deve terminar para que a seta não seja sobreposta pelo nó destino
         //a função como está é uma tentativa de resolver o problema
